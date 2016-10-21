@@ -1,0 +1,23 @@
+<div class="header">
+  <h1>Todos</h1>
+  <h2></h2>
+</div>
+
+<div class="content">
+  <h2 class="content-subhead">todos</h2>
+
+  <form ng-submit="tc.addTodo()" class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Create Todo's:</legend>
+
+        <label for="Item">Item</label>
+        <input ng-model="tc.newTodo.item" id="name" type="text" placeholder="Item">
+
+        <button type="submit" class="pure-button pure-button-primary">Create Todo</button>
+    </fieldset>
+</form>
+
+  <ul>
+    <li ui-sref="todo({id: todo._id})" ng-repeat="todo in tc.todos">{{todo.item}} {}</li>
+  </ul>
+</div>
